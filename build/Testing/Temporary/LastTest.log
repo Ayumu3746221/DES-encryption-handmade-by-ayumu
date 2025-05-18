@@ -1,0 +1,28 @@
+Start testing: May 18 22:07 JST
+----------------------------------------------------------
+1/1 Testing: TestIP
+1/1 Test: TestIP
+Command: "/Users/ayumu/git/DES-encryption-handmade-by-ayumu/build/TestIP"
+Directory: /Users/ayumu/git/DES-encryption-handmade-by-ayumu/build
+"TestIP" start time: May 18 22:07 JST
+Output:
+----------------------------------------------------------
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PermutationTests
+[ RUN      ] PermutationTests.InitialPermutation
+[       OK ] PermutationTests.InitialPermutation (0 ms)
+[----------] 1 test from PermutationTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TestIP" end time: May 18 22:07 JST
+"TestIP" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 18 22:07 JST
