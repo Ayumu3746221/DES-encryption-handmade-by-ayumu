@@ -13,7 +13,7 @@ namespace des {
         return static_cast<uint8_t>((sevenBits << 1) | parity);
     }
 
-    uint64_t KeyGenerator::genarateMasterKey() {
+    uint64_t KeyGenerator::generateMasterKey() {
         // 暗号用乱数生成器
         std::random_device rd;
         std::mt19937_64 gen(rd());
