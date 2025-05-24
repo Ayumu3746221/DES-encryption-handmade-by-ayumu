@@ -1,6 +1,9 @@
 // tests/TestKeySchedule.cpp
 #include <gtest/gtest.h>
 #include "KeySchedule.hpp"
+#include "BitUtils.hpp"
+#include "Tables.hpp"
+#include <array>
 
 using namespace des;
 
@@ -8,6 +11,14 @@ using namespace des;
 // Master key: 0x133457799BBCDFF1
 // Expected first subkey K1: 0x1B02EFFC7072
 // Expected last subkey K16: 0xEFC2C6D8EF73 (example value; verify if correct per spec)
+
+TEST(BitUtilsTests, TestApplyPermutationIdentity) {
+    // 8ビットの入力に対する恒等変換テスト
+    constexpr std::array<int, 8> identity = {1,2,3,4,5,6,7,8};
+    uint64_t input = 0b10110101;  // 0xB5
+    uint64_t output = BitUtils::applyPermutation<8>(input, identity);
+    EXPECT_EQ(output, input);
+}
 
 TEST(KeyScheduleTests, FirstSubkey) {
     uint64_t masterKey = 0x133457799BBCDFF1ULL;
