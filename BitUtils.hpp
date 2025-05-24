@@ -14,12 +14,13 @@ namespace BitUtils {
 uint8_t getBit(uint64_t data, int pos);
 
 /**
- * @brief 指定位置にビットを設定する（1始まりインデックス）
- * @param data 書き込み対象の整数参照
- * @param pos 1～64 の位置（左から数える）
- * @param value 設定するビット値 (0 or 1)
+ * @brief 指定位置にビットを設定する（LSB=0 から起算）
+ * @param output ビット列を格納する整数
+ * @param idx 1～64 の位置（左から数える）
+ * @param value 設定するビット (0 or 1)
+ * @note 0以外の値が指定された場合は1として扱う
  */
-void setBit(uint64_t &data, int pos, uint8_t value);
+void setBitOut(uint64_t &output, int idx, uint8_t value);
 
 /**
  * @brief 入力ビット列にテーブルに基づく置換を適用する
@@ -34,7 +35,7 @@ uint64_t applyPermutation(uint64_t input, const std::array<int, N> &table) {
     for (size_t i = 0; i < N; ++i) {
         // table の値は 1～64 の位置を示す
         uint8_t bit = getBit(input, table[i]);
-        setBit(output, static_cast<int>(i + 1), bit);
+        setBitOut(output, N - 1 - static_cast<int>(i), bit);
     }
     return output;
 }
