@@ -1,12 +1,11 @@
 #pragma once
 #include <array>
 #include <cstdint>
-
 namespace des {
 
     class KeySchedule
     {
-    private:
+    public:
         /**
          * @brief コンストラクタ
          * @param key 64ビットのマスターキー（パリティビット含む）
@@ -19,6 +18,7 @@ namespace des {
          * @return 48ビットサブキー（下位ビットに格納）
         */
        uint64_t getSubkey(int round) const;
+
 
     private:
         std::array<uint64_t, 16> subkeys_; // 各ラウンドの48ビットキー

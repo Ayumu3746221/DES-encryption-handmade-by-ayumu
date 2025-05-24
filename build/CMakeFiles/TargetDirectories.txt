@@ -1,4 +1,0 @@
-/Users/ayumu/git/DES-encryption-handmade-by-ayumu/build/CMakeFiles/TestIP.dir
-/Users/ayumu/git/DES-encryption-handmade-by-ayumu/build/CMakeFiles/test.dir
-/Users/ayumu/git/DES-encryption-handmade-by-ayumu/build/CMakeFiles/edit_cache.dir
-/Users/ayumu/git/DES-encryption-handmade-by-ayumu/build/CMakeFiles/rebuild_cache.dir
